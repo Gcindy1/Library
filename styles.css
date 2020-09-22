@@ -1,0 +1,351 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	font-family: 'Roboto', sans-serif;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Content*/
+
+body {
+	background-image: url(images/background.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #4b4c4c;
+	font-family: 'Anton', sans-serif;
+}
+
+#new {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	text-align: center;
+	font-size: 25px;
+	color: #fff;
+	padding-top: 230px;
+	width: 200px;
+	height: 400px;
+	background-image: url(images/the-ribbon-287142_640.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	-webkit-transition: allt 1s;
+	/* For Safari 3.1 to 6.0 */
+	transition: all 1s;
+}
+
+#new:hover {
+	top: -10px;
+}
+
+#books-container {
+	display: flex;
+	flex-flow: row-reverse wrap-reverse;
+	justify-content: center;
+	padding: 0px;
+	margin: 100px auto;
+	width: 80%;
+
+}
+
+#books-container::before {
+	content: "";
+	height: 70px;
+	width: 100%;
+	background-image: url(images/wall-shelf-1324450_1280.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.bookContainer {
+	flex-basis: 8%;
+	height: 550px;
+	border: 1px solid #371b07;
+	position: relative;
+	text-align: center;
+	background-image: url(images/square-2191133_640.jpg);
+	background-size: cover;
+	background-position: center;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all 0.2s;
+	overflow: hidden;
+}
+
+.item {
+	text-align: center;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.item:first-child {
+	color: #E5C100;
+	-ms-transform: rotate(90deg);
+	/* IE 9 */
+	-webkit-transform: rotate(90deg);
+	/* Safari 3-8 */
+	transform: rotate(90deg);
+	margin-top: 140px;
+	font-size: 25px;
+	font-family: 'Anton', sans-serif;
+	user-select: none;
+	text-shadow: 2px 2px #000;
+	padding: 5px;
+
+}
+
+.item:nth-child(2) {
+	position: absolute;
+	bottom: 5px;
+	text-align: center;
+	padding: 10px;
+	color: #E5C100;
+	text-shadow: 1px 1px black;
+}
+
+.item:nth-child(3) {
+	margin-top: 40px;
+	color: #000;
+}
+
+.item:nth-child(3)::after {
+	content: ' Pages';
+}
+
+.item:nth-child(4) {
+	margin-top: 20px;
+	color: #FF6666;
+}
+
+.btn-delete {
+	position: absolute;
+	bottom: 30px;
+	left: 10px;
+	width: 70px;
+	padding: 10px;
+	border-radius: 10%;
+	background-color: #76C092;
+	outline: none;
+	font-family: 'Anton', sans-serif;
+	cursor: pointer;
+	filter: opacity(80%);
+}
+
+
+.btn-toggle {
+	width: 100px;
+	padding: 10px;
+	margin: 50px auto;
+	border-radius: 10%;
+	background-color: #76C092;
+	outline: none;
+	font-size: 18px;
+	font-family: 'Anton', sans-serif;
+	cursor: pointer;
+}
+
+.btn-toggle-finished {
+
+	width: 100px;
+	padding: 10px;
+	margin: 50px auto;
+	border-radius: 10%;
+	background-color: #76C092;
+	outline: none;
+	font-size: 18px;
+	font-family: 'Anton', sans-serif;
+	cursor: pointer;
+}
+
+#newForm {
+	position: absolute;
+	top: 5%;
+	left: 40%;
+	border: 2px solid #222;
+	display: none;
+	z-index: 99;
+	width: 375px;
+	height: 290px;
+	background-image: url(images/postcard-1487216_640.jpg);
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
+	padding-top: 40px;
+	border-radius: 5%;
+
+}
+
+input {
+	width: 250px;
+	font-size: 25px;
+	background-color: transparent;
+	outline: none;
+	color: #222;
+	margin: auto;
+	padding: 10px;
+	outline: none;
+	background: none;
+	background-image: none;
+	border: none;
+	box-shadow: 1px 1px #666565;
+	margin: 5px;
+
+}
+
+#submit,
+#cancel {
+	width: 100px;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10%;
+	background-color: #76C092;
+	outline: none;
+	font-family: 'Anton', sans-serif;
+}
+
+
+
+.preview {
+	padding-top: 50px;
+	position: absolute;
+	bottom: 100px;
+	width: 400px;
+	height: 550px;
+	background-image: url(images/book-3057902_640.png);
+	background-size: cover;
+	background-position: center;
+	border: none;
+	z-index: 999;
+	font-size: 35px;
+	overflow: hidden;
+}
